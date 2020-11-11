@@ -1,0 +1,215 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    position: relative;  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #ce6348;
+    color: #000000;
+    scroll-behavior: smooth;  
+}
+
+#hero{
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer{
+    font-size: 0.8rem;
+}
+
+/*** MISE EN PAGE ***/
+h1, h2{
+    font-size: 5rem; /*80px*/
+    font-weight: 700;
+    margin-bottom: 0;
+    word-wrap: break-word;
+}
+
+h2{
+    font-size: 4.4rem;
+}
+
+hr{
+    background-color: #000000;
+    height: 1.6px;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.lien{
+    text-decoration: none;
+    background: #daa731cc;
+    color: #000000cc;
+    border-bottom: 1px solid #000000;
+    overflow: hidden;
+    padding:  0 3px 0 3px;
+}
+
+.lien:hover{
+    text-decoration: none;
+    background: #000000;
+    color: #ce4c2c;
+    border-bottom: 1px solid #000000;
+}
+
+.list{
+    list-style: inside url('check.svg');
+}
+
+.list-none{
+    list-style: none;
+}
+
+.mb{
+    margin-bottom: 60px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+/*** BOUTONS ***/
+.button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none; 
+    border: 3px solid #000000;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    cursor:pointer;
+}
+
+.button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.10);
+}
+
+.button-full{
+    background-color: transparent;
+    color: #000000;
+}
+
+.button-full:hover{
+    background-color: transparent;
+    color: #000000;
+    transform: scale(1.10);
+}
+
+.shadow-bottom{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 
+    0 2px 2px rgba(0,0,0,0.15), 
+    0 4px 4px rgba(0,0,0,0.15), 
+    0 8px 8px rgba(0,0,0,0.15);
+}
+
+.shadow-top{
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.15), 
+    0 -2px 2px rgba(0,0,0,0.15), 
+    0 -4px 4px rgba(0,0,0,0.15), 
+    0 -8px 8px rgba(0,0,0,0.15);
+}
+
+/*** IMAGE ZOOM ***/
+.img-wrapper{
+    overflow: hidden;
+    position: relative;
+    transition: ttransform 0.75s cubic-bezier(0.165, 0.84, 0.44, 1),
+    -webkit-transform 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.img-wrapper:hover{
+    transform: scale(0.95); 
+}
+
+.img-wrapper:hover img{
+    transform: scale(1.2); 
+}
+
+.img-wrapper img{
+    width: 100%;
+    transition: transform 0.75s cubic-bezier(0.165, 0.84, 0.44, 1),
+      -webkit-transform 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/*** BLOC ***/
+.bloc{
+    width: 50%;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+/*** RESPONSIVE ***/
+@media screen and (min-device-width: 1280px) {
+    html, body{
+        font-size: 18px;
+    }	
+}
+
+@media screen and (max-width:600px) {
+    .bloc {
+        width:100%;
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .special-list{
+        padding: 0;
+    }
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 800px) {
+	.bloc {
+        width:70%; 
+    }
+}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+    html, body{
+        font-size: 18px;
+    }
+
+	.bloc {
+        width:70%; 
+    }
+}
+
