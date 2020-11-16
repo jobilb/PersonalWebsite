@@ -92,6 +92,11 @@ hr{
 
 a{
     text-decoration: none;
+    color: #000000;
+}
+
+a:visited{
+    color: #000000;
 }
 
 .lien{
