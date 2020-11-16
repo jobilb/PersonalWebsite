@@ -6,7 +6,7 @@ html, body{
     font-size: 16px;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #ce6348;
+    background-color: #f8eacf/*#ce6348*/;
     color: #000000;
     scroll-behavior: smooth;  
 }
@@ -26,7 +26,49 @@ html, body{
     text-align: center;
 }
 
+.container-product {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.product{
+    /*flex: 1;*/
+    /*background-color: #d6d6d6;*/
+    width: calc(60% /3);
+    min-height: 400px;
+    margin: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0px 10px 6px -6px #999;
+    -moz-box-shadow: 0 10px 6px -6px #999;
+    box-shadow: 0px 10px 6px -6px #999;
+}
+
+.product-header{
+    background-color: #ce6348;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.product-content{
+    padding: 15px;
+}
+
+
 footer{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     font-size: 0.8rem;
 }
 
@@ -110,6 +152,13 @@ a{
     cursor:pointer;
 }
 
+.product-button{
+    background-color: #daa731cc;
+    border-style: none;
+    font-size: 0.8rem;
+    margin-top: 30px;
+}
+
 .button:hover{
     background-color: #000000;
     color: #ffffff;
@@ -172,6 +221,14 @@ a{
     margin-bottom: 80px;
 }
 
+.bloc-quote{
+    width: 30%;
+    margin-left: 45%;
+    margin-bottom: 80px;
+    text-align: right;
+    font-style: italic;
+}
+
 /*** RESPONSIVE ***/
 @media screen and (min-device-width: 1280px) {
     html, body{
@@ -182,6 +239,28 @@ a{
 @media screen and (max-width:600px) {
     .bloc {
         width:100%;
+    }
+
+    .bloc-quote{
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .container-product {
+        margin: auto;
+        margin-bottom: 80px;
+        flex-direction: column;
+    }
+
+    .container-product {
+        flex-direction: column;
+    }
+    
+
+    .product{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 60px;
     }
 
     h1{
@@ -201,6 +280,21 @@ a{
 	.bloc {
         width:70%; 
     }
+
+    .bloc-quote{
+        width: 50%;
+        margin-left: 35%;
+    }
+
+    .container-product {
+        flex-direction: column;
+    }
+
+    .product{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 60px;
+    }
 }
 
 @media screen and (min-device-width: 800px) and (max-device-width: 1280px) {
@@ -210,6 +304,23 @@ a{
 
 	.bloc {
         width:70%; 
+    }
+
+    .bloc-quote{
+        width: 50%;
+        margin-left: 35%;
+    }
+
+    .container-product {
+        
+        flex-wrap: wrap;
+    }
+
+    .product{
+        width: 400px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 60px;
     }
 }
 
